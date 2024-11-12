@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>07-11-2024 at 19:20.07</u><br />
-Build ended on: <u>07-11-2024 at 19:20.14</u><p />
+Build started on: <u>12-11-2024 at 19:30.50</u><br />
+Build ended on: <u>12-11-2024 at 19:30.58</u><p />
 <b>-------------- Build: Debug in Пример (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
 g++git-auto.bat "D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp" -o bin\Debug\Пример.exe -mwindows  -Wall -fexceptions  -g  -Wall -Wextra -Weffc++ -Wcast-align -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wfloat-equal -Wformat-security -Wformat=2 -Wignored-qualifiers -Winit-self -Winline -Wlogical-op -Wmain -Wmissing-declarations -Wno-missing-field-initializers -Wmissing-include-dirs -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wswitch-default -Wswitch-enum -Wtype-limits -Wundef -Wunreachable-code -Wwrite-strings -fexceptions -g -pipe -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
@@ -24,9 +24,9 @@ D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: 
  void Man(int x, int y, int xLegs)<br />
       ^<br />
 D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: In function 'void NPC(int, int, int)':<br />
-<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:114:8: warning: no previous declaration for 'void NPC(int, int, int)' [-Wmissing-declarations]</font><br />
-   void NPC(int x, int y, int xLegsNps)<br />
-        ^<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:114:6: warning: no previous declaration for 'void NPC(int, int, int)' [-Wmissing-declarations]</font><br />
+ void NPC(int x, int y, int xLegsNps)<br />
+      ^<br />
 D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: In function 'void fon()':<br />
 <font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:155:7: warning: no previous declaration for 'void fon()' [-Wmissing-declarations]</font><br />
   void fon()<br />
@@ -89,17 +89,41 @@ D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: 
 <font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:338:6: warning: no previous declaration for 'void table()' [-Wmissing-declarations]</font><br />
  void table()<br />
       ^<br />
-D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: In function 'void Replic(const char*, int)':<br />
-<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:350:6: warning: no previous declaration for 'void Replic(const char*, int)' [-Wmissing-declarations]</font><br />
- void Replic(const char* text, int sizeFont)<br />
+D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: In function 'void Replic(int, int, const char*, int)':<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:350:6: warning: no previous declaration for 'void Replic(int, int, const char*, int)' [-Wmissing-declarations]</font><br />
+ void Replic(int x, int y, const char* text, int sizeFont)<br />
       ^<br />
-D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: At global scope:<br />
-<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:350:6: warning: unused parameter 'text' [-Wunused-parameter]</font><br />
+D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: In function 'void Point(int)':<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:358:6: warning: no previous declaration for 'void Point(int)' [-Wmissing-declarations]</font><br />
+ void Point(int x)<br />
+      ^<br />
+D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp: In function 'int main()':<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:370:13: warning: unused variable 'xSun' [-Wunused-variable]</font><br />
+         int xSun = -100;<br />
+             ^<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:371:13: warning: unused variable 'ySun' [-Wunused-variable]</font><br />
+         int ySun = 250;<br />
+             ^<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:372:13: warning: unused variable 'xCloud' [-Wunused-variable]</font><br />
+         int xCloud = -20;<br />
+             ^<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:373:13: warning: unused variable 'xMapa' [-Wunused-variable]</font><br />
+         int xMapa = 109;<br />
+             ^<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:374:13: warning: unused variable 'yMapa' [-Wunused-variable]</font><br />
+         int yMapa = 390;<br />
+             ^<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:379:13: warning: unused variable 'xSea' [-Wunused-variable]</font><br />
+         int xSea = 500;<br />
+             ^<br />
+<font color="#0000ff">D:\Нещадим Игорь\Пираты Глубоких Морей\main.cpp:383:13: warning: unused variable 'xPoint' [-Wunused-variable]</font><br />
+         int xPoint = 0;<br />
+             ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in D:/ /  /.git-auto/... <br />
-Output size is 2,28 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 6 seconds)</font><br />
-<font color="#0000ff">0 errors, 22 warnings (0 minutes, 6 seconds)</font><br />
+Output size is 2,27 MB<br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 7 seconds)</font><br />
+<font color="#0000ff">0 errors, 29 warnings (0 minutes, 7 seconds)</font><br />
 </tt>
 </body>
 </html>

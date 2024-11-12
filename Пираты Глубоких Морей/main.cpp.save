@@ -111,7 +111,7 @@ void Man(int x, int y, int xLegs)
 
   }
 
-  void NPC(int x, int y, int xLegsNps)
+void NPC(int x, int y, int xLegsNps)
   {
   txSetColor(TX_BLACK, 5);
     txSetFillColor(TX_BLACK);
@@ -125,7 +125,7 @@ void Man(int x, int y, int xLegs)
 
 
   // telo
-  txSetColor(TX_GREEN,5);
+  txSetColor(RGB(255,174,201),5);
   txLine(x+655-657,y+400-291,x+655-657,y+315-291);
   // hands
   // left hand
@@ -347,17 +347,18 @@ void table()
      }
 
 
-void Replic(const char* text, int sizeFont)
+void Replic(int x, int y, const char* text, int sizeFont)
      {
 
-     txSetColor(TX_BLACK);
-     txSetFillColor(TX_BLACK);
-     txRectangle(0,0,800,600);
+
      txSelectFont("Comic Sans MS" , sizeFont);
-     txDrawText (0,0,800,600,"text");
+     txDrawText (x,y,x+500,y+100,text);
      }
 
-
+void Point(int x)
+{
+txLine(x,-300,x+1,-300);
+}
 
 int main()
     {
@@ -379,6 +380,7 @@ int main()
         int xNPS = 558;
         int yNPS = 234 ;
         int xLegsNps = 0;
+        int xPoint = 0;
 
     while (yMan<375)
     {
@@ -392,15 +394,52 @@ int main()
     fon();
     drawHome();
     Man(xMan,yMan,xLegs);
-
     txEnd();
     xMan = xMan - 2;
     yMan = yMan + 2;
     ySun = ySun - 1;
     xSun = xSun + 3;
-    xLegs = xLegs + 35;
+    xLegs = xLegs + 13;
     xCloud = xCloud + 2;
-    txSleep(15);
+    txSleep(20);
+
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xMan = xMan - 2;
+    yMan = yMan + 2;
+    ySun = ySun - 1;
+    xSun = xSun + 3;
+    xLegs = xLegs + 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xMan = xMan - 2;
+    yMan = yMan + 2;
+    ySun = ySun - 1;
+    xSun = xSun + 3;
+    xLegs = xLegs + 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
 
     txBegin();
     drawSky(RGB (31, 196, 224));
@@ -412,19 +451,53 @@ int main()
     fon();
     drawHome();
     Man(xMan,yMan,xLegs);
-
-
     txEnd();
     xMan = xMan - 2;
     yMan = yMan + 2;
     ySun = ySun - 1;
     xSun = xSun + 3;
-    xLegs = xLegs - 35;
+    xLegs = xLegs - 13;
     xCloud = xCloud + 2;
-    txSleep(15);
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xMan = xMan - 2;
+    yMan = yMan + 2;
+    ySun = ySun - 1;
+    xSun = xSun + 3;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xMan = xMan - 2;
+    yMan = yMan + 2;
+    ySun = ySun - 1;
+    xSun = xSun + 3;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
     }
-
-
 
     while (xMan>100)
     {
@@ -442,9 +515,45 @@ int main()
     xMan = xMan - 3;
     ySun = ySun - 1;
     xSun = xSun + 2;
-    xLegs = xLegs + 35;
+    xLegs = xLegs + 13;
     xCloud = xCloud + 2;
-    txSleep(15);
+    txSleep(20);
+
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xMan = xMan - 3;
+    ySun = ySun - 1;
+    xSun = xSun + 2;
+    xLegs = xLegs + 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xMan = xMan - 3;
+    ySun = ySun - 1;
+    xSun = xSun + 2;
+    xLegs = xLegs + 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
 
     txBegin();
     drawSky(RGB (31, 196, 224));
@@ -460,16 +569,46 @@ int main()
     xMan = xMan - 3;
     ySun = ySun - 1;
     xSun = xSun + 2;
-    xLegs = xLegs - 35;
+    xLegs = xLegs - 13;
     xCloud = xCloud + 2;
-    txSleep(15);
-                }
+    txSleep(20);
 
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xMan = xMan - 3;
+    ySun = ySun - 1;
+    xSun = xSun + 2;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
 
-
-
-
-
+        txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xMan = xMan - 3;
+    ySun = ySun - 1;
+    xSun = xSun + 2;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+    }
 
     while (yMan >291)
     {
@@ -486,9 +625,9 @@ int main()
     txEnd();
     yMan = yMan - 3;
     xSun = xSun + 3;
-    xLegs = xLegs + 35;
+    xLegs = xLegs + 13;
     xCloud = xCloud + 2;
-    txSleep(15);
+    txSleep(20);
 
     txBegin();
     drawSky(RGB (31, 196, 224));
@@ -503,11 +642,79 @@ int main()
     txEnd();
     yMan = yMan - 3;
     xSun = xSun + 3;
-    xLegs = xLegs - 35;
+    xLegs = xLegs + 13;
     xCloud = xCloud + 2;
-    txSleep(15);
-    }
+    txSleep(20);
 
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    yMan = yMan - 3;
+    xSun = xSun + 3;
+    xLegs = xLegs + 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    yMan = yMan - 3;
+    xSun = xSun + 3;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    yMan = yMan - 3;
+    xSun = xSun + 3;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    yMan = yMan - 3;
+    xSun = xSun + 3;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+    }
 
     while (yMan <375)
     {
@@ -526,9 +733,9 @@ int main()
     yMan = yMan + 3;
     yMapa = yMapa + 3;
     xSun = xSun + 3;
-    xLegs = xLegs + 35;
+    xLegs = xLegs + 13;
     xCloud = xCloud + 2;
-    txSleep(15);
+    txSleep(20);
 
     txBegin();
     drawSky(RGB (31, 196, 224));
@@ -545,14 +752,91 @@ int main()
     yMan = yMan + 3;
     yMapa = yMapa + 3;
     xSun = xSun + 3;
-    xLegs = xLegs - 35;
+    xLegs = xLegs + 13;
     xCloud = xCloud + 2;
-    txSleep(15);
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    yMan = yMan + 3;
+    yMapa = yMapa + 3;
+    xSun = xSun + 3;
+    xLegs = xLegs + 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    yMan = yMan + 3;
+    yMapa = yMapa + 3;
+    xSun = xSun + 3;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    yMan = yMan + 3;
+    yMapa = yMapa + 3;
+    xSun = xSun + 3;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    yMan = yMan + 3;
+    yMapa = yMapa + 3;
+    xSun = xSun + 3;
+    xLegs = xLegs - 13;
+    xCloud = xCloud + 2;
+    txSleep(20);
     }
 
-
     while (xMan <890)
-    {txBegin();
+    {
+    txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
     drawCloud(xCloud, 70);
@@ -568,7 +852,7 @@ int main()
     xMapa = xMapa + 4;
     xSun = xSun + 3;
     xCloud = xCloud + 2;
-    xLegs = xLegs + 35;
+    xLegs = xLegs + 13;
     txSleep(15);
 
     txBegin();
@@ -587,7 +871,83 @@ int main()
     xMapa = xMapa + 4;
     xSun = xSun + 3;
     xCloud = xCloud + 2;
-    xLegs = xLegs - 35;
+    xLegs = xLegs + 13;
+    txSleep(15);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xMan = xMan + 4;
+    xMapa = xMapa + 4;
+    xSun = xSun + 3;
+    xCloud = xCloud + 2;
+    xLegs = xLegs + 13;
+    txSleep(15);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xMan = xMan + 4;
+    xMapa = xMapa + 4;
+    xSun = xSun + 3;
+    xCloud = xCloud + 2;
+    xLegs = xLegs - 13;
+    txSleep(15);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xMan = xMan + 4;
+    xMapa = xMapa + 4;
+    xSun = xSun + 3;
+    xCloud = xCloud + 2;
+    xLegs = xLegs - 13;
+    txSleep(15);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    tree(145,450);
+    tree(90,470);
+    drawLand();
+    fon();
+    drawHome();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xMan = xMan + 4;
+    xMapa = xMapa + 4;
+    xSun = xSun + 3;
+    xCloud = xCloud + 2;
+    xLegs = xLegs - 13;
     txSleep(15);
     }
 
@@ -610,8 +970,6 @@ int main()
     txSleep(10);
     }
 
-
-
     while (xCloud<900)
     {
     txBegin();
@@ -627,7 +985,7 @@ int main()
     drawMapa(xMapa, yMapa);
     txEnd();
     xCloud = xCloud + 2;
-    txSleep(10);
+    txSleep(20);
     }
 
     xMan = -50;
@@ -659,12 +1017,12 @@ int main()
     Man(xMan,yMan,xLegs);
     drawMapa(xMapa, yMapa);
     txEnd();
-    xLegs = xLegs + 35;
+    xLegs = xLegs + 13;
     xMan = xMan + 3;
      xMapa = xMapa + 3;
     xCloud = xCloud + 2;
     xSun = xSun + 1;
-    txSleep(10);
+    txSleep(20);
 
     txBegin();
     drawSky(RGB (31, 196, 224));
@@ -688,22 +1046,137 @@ int main()
     Man(xMan,yMan,xLegs);
     drawMapa(xMapa, yMapa);
     txEnd();
-    xLegs = xLegs - 35;
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+     xMapa = xMapa + 3;
+    xCloud = xCloud + 2;
+    xSun = xSun + 1;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    drawLand();
+    fon();
+    tree2(50,480);
+    tree(145,450);
+    tree(180,480);
+    tree(270,473);
+    tree(350,475);
+    tree(410,460);
+    tree(450,480);
+    tree2(430,485);
+    tree(500,460);
+    tree(550,470);
+    tree(600,450);
+    tree(100,460);
+    tree2(700,480);
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+     xMapa = xMapa + 3;
+    xCloud = xCloud + 2;
+    xSun = xSun + 1;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    drawLand();
+    fon();
+    tree2(50,480);
+    tree(145,450);
+    tree(180,480);
+    tree(270,473);
+    tree(350,475);
+    tree(410,460);
+    tree(450,480);
+    tree2(430,485);
+    tree(500,460);
+    tree(550,470);
+    tree(600,450);
+    tree(100,460);
+    tree2(700,480);
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
     xMan = xMan + 3;xBar = 0;
     yBar = 450;
     xMapa = xMapa + 3;
     xCloud = xCloud + 2;
     xSun = xSun + 3;
-    txSleep(10);
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    drawLand();
+    fon();
+    tree2(50,480);
+    tree(145,450);
+    tree(180,480);
+    tree(270,473);
+    tree(350,475);
+    tree(410,460);
+    tree(450,480);
+    tree2(430,485);
+    tree(500,460);
+    tree(550,470);
+    tree(600,450);
+    tree(100,460);
+    tree2(700,480);
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;xBar = 0;
+    yBar = 450;
+    xMapa = xMapa + 3;
+    xCloud = xCloud + 2;
+    xSun = xSun + 3;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    drawLand();
+    fon();
+    tree2(50,480);
+    tree(145,450);
+    tree(180,480);
+    tree(270,473);
+    tree(350,475);
+    tree(410,460);
+    tree(450,480);
+    tree2(430,485);
+    tree(500,460);
+    tree(550,470);
+    tree(600,450);
+    tree(100,460);
+    tree2(700,480);
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;xBar = 0;
+    yBar = 450;
+    xMapa = xMapa + 3;
+    xCloud = xCloud + 2;
+    xSun = xSun + 3;
+    txSleep(20);
     }
 
     xMan = -50;
     xMapa = -50;
     xCloud = -50;
     xSun = -50;
-
-
-
 
     while (xMan<460)
     {
@@ -718,11 +1191,8 @@ int main()
     doska ();
     Man(xMan,yMan,xLegs);
     drawMapa(xMapa, yMapa);
-
-
-
     txEnd();
-    xLegs = xLegs + 35;
+    xLegs = xLegs + 13;
     xMan = xMan + 3;
      xMapa = xMapa + 3;
     xCloud = xCloud + 2;
@@ -740,14 +1210,89 @@ int main()
     doska ();
     Man(xMan,yMan,xLegs);
     drawMapa(xMapa, yMapa);
-
     txEnd();
-    xLegs = xLegs - 35;
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+     xMapa = xMapa + 3;
+    xCloud = xCloud + 2;
+    xSun = xSun + 1;
+    txSleep(10);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    DrawSand();
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    doska ();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+     xMapa = xMapa + 3;
+    xCloud = xCloud + 2;
+    xSun = xSun + 1;
+    txSleep(10);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    DrawSand();
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    doska ();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
     xMan = xMan + 3;
     xMapa = xMapa + 3;
     xCloud = xCloud + 2;
     xSun = xSun + 3;
-    txSleep(10);
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    DrawSand();
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    doska ();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;
+    xMapa = xMapa + 3;
+    xCloud = xCloud + 2;
+    xSun = xSun + 3;
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    DrawSand();
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    doska ();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;
+    xMapa = xMapa + 3;
+    xCloud = xCloud + 2;
+    xSun = xSun + 3;
+    txSleep(20);
     }
 
 
@@ -765,7 +1310,7 @@ int main()
     Man(xMan,yMan,xLegs);
     drawMapa(xMapa, yMapa);
     txEnd();
-    xLegs = xLegs + 35;
+    xLegs = xLegs + 13;
     xMan = xMan + 3;
     yMan = yMan - 2;
     xMapa = xMapa + 3;
@@ -773,7 +1318,7 @@ int main()
     xCloud = xCloud + 2;
     xSun = xSun + 1;
 
-    txSleep(10);
+    txSleep(20);
 
     txBegin();
     drawSky(RGB (31, 196, 224));
@@ -787,7 +1332,51 @@ int main()
     Man(xMan,yMan,xLegs);
     drawMapa(xMapa, yMapa);
     txEnd();
-    xLegs = xLegs - 35;
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+    yMan = yMan - 2;
+    xMapa = xMapa + 3;
+    yMapa = yMapa - 2;
+    xCloud = xCloud + 2;
+    xSun = xSun + 1;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    DrawSand();
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    doska ();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs + 13;
+    xMan = xMan + 3;
+    yMan = yMan - 2;
+    xMapa = xMapa + 3;
+    yMapa = yMapa - 2;
+    xCloud = xCloud + 2;
+    xSun = xSun + 1;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    DrawSand();
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    doska ();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
     xMan = xMan + 3;
     yMan = yMan - 2;
     xMapa = xMapa + 3;
@@ -795,10 +1384,52 @@ int main()
     xCloud = xCloud + 2;
     xSun = xSun + 3;
 
-    txSleep(10);
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    DrawSand();
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    doska ();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;
+    yMan = yMan - 2;
+    xMapa = xMapa + 3;
+    yMapa = yMapa - 2;
+    xCloud = xCloud + 2;
+    xSun = xSun + 3;
+
+    txSleep(20);
+
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    DrawSand();
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    doska ();
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xLegs = xLegs - 13;
+    xMan = xMan + 3;
+    yMan = yMan - 2;
+    xMapa = xMapa + 3;
+    yMapa = yMapa - 2;
+    xCloud = xCloud + 2;
+    xSun = xSun + 3;
+
+    txSleep(20);
     }
-
-
 
      //море
      xMan = 90;
@@ -825,8 +1456,8 @@ int main()
     xSun = xSun + 2;
     yMan = yMan + 1;
     yKarabl = yKarabl + 1;
-    txSleep(30);
-        txBegin();
+    txSleep(20);
+    txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
     drawCloud(xCloud, 70);
@@ -840,7 +1471,22 @@ int main()
     xSun = xSun + 2;
     yMan = yMan + 1;
     yKarabl = yKarabl + 1;
-    txSleep(30);
+    txSleep(20);
+    txBegin();
+    drawSky(RGB (31, 196, 224));
+    drawSun(xSun, ySun);
+    drawCloud(xCloud, 70);
+    Sea(xSea);
+    fon();
+    drawKarabl(xKarabl,yKarabl);
+    Man(xMan,yMan,xLegs);
+    drawMapa(xMapa, yMapa);
+    txEnd();
+    xCloud = xCloud + 1;
+    xSun = xSun + 2;
+    yMan = yMan + 1;
+    yKarabl = yKarabl + 1;
+    txSleep(20);
      txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
@@ -855,22 +1501,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan + 1;
     yKarabl = yKarabl + 1;
-    txSleep(30);
-     txBegin();
-    drawSky(RGB (31, 196, 224));
-    drawSun(xSun, ySun);
-    drawCloud(xCloud, 70);
-    Sea(xSea);
-    fon();
-    drawKarabl(xKarabl,yKarabl);
-    Man(xMan,yMan,xLegs);
-    drawMapa(xMapa, yMapa);
-    txEnd();
-    xCloud = xCloud + 1;
-    xSun = xSun + 2;
-    yMan = yMan + 1;
-    yKarabl = yKarabl + 1;
-    txSleep(30);
+    txSleep(20);
         txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
@@ -885,7 +1516,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan + 1;
     yKarabl = yKarabl + 1;
-    txSleep(30);
+    txSleep(20);
 
             txBegin();
     drawSky(RGB (31, 196, 224));
@@ -901,7 +1532,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan + 1;
     yKarabl = yKarabl + 1;
-    txSleep(30);
+    txSleep(20);
             txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
@@ -916,7 +1547,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan + 1;
     yKarabl = yKarabl + 1;
-    txSleep(30);
+    txSleep(20);
 
     txBegin();
     drawSky(RGB (31, 196, 224));
@@ -932,7 +1563,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan -1;
     yKarabl = yKarabl - 1;
-    txSleep(30);
+    txSleep(20);
 
         txBegin();
     drawSky(RGB (31, 196, 224));
@@ -948,7 +1579,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan -1;
     yKarabl = yKarabl - 1;
-    txSleep(30);
+    txSleep(20);
         txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
@@ -963,7 +1594,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan -1;
     yKarabl = yKarabl - 1;
-    txSleep(30);
+    txSleep(20);
         txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
@@ -978,7 +1609,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan -1;
     yKarabl = yKarabl - 1;
-    txSleep(30);
+    txSleep(20);
         txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
@@ -993,7 +1624,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan -1;
     yKarabl = yKarabl - 1;
-    txSleep(30);
+    txSleep(20);
         txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
@@ -1008,7 +1639,7 @@ int main()
     xSun = xSun + 2;
     yMan = yMan -1;
     yKarabl = yKarabl - 1;
-    txSleep(30);
+    txSleep(20);
            txBegin();
     drawSky(RGB (31, 196, 224));
     drawSun(xSun, ySun);
@@ -1023,9 +1654,8 @@ int main()
     xSun = xSun + 2;
     yMan = yMan -1;
     yKarabl = yKarabl - 1;
-    txSleep(30);
+    txSleep(20);
     }
-
 
     xBar = 200;
     yBar = 450;
@@ -1034,7 +1664,6 @@ int main()
     xKarabl = 0;
     yKarabl = 80;
     xSun = 0;
-
 
     while (xBar>50)
     {
@@ -1048,7 +1677,7 @@ int main()
     xKarabl = xKarabl - 3;
     xLegs = xLegs + 35;
 
-    txSleep(15);
+    txSleep(20);
 
         txBegin();
     drawSky(RGB (31, 196, 224));
@@ -1060,10 +1689,8 @@ int main()
     xKarabl = xKarabl - 3;
     xLegs = xLegs - 35;
 
-    txSleep(15);
+    txSleep(20);
     }
-
-
 
     while (xBar>0)
     {
@@ -1205,8 +1832,7 @@ int main()
     txSleep(20);
     }
 
-
-while (xMan<340)
+    while (xMan<340)
     {
     txBegin();
     drawSky(RGB (31, 196, 224));
@@ -1214,10 +1840,8 @@ while (xMan<340)
     bar(xBar,yBar);
     Man(xMan,yMan,xLegs);
     txEnd();
-
     xLegs = xLegs + 13;
     xMan = xMan + 3;
-
     txSleep(20);
 
     txBegin();
@@ -1226,26 +1850,22 @@ while (xMan<340)
     bar(xBar,yBar);
     Man(xMan,yMan,xLegs);
     txEnd();
-
     xLegs = xLegs + 13;
     xMan = xMan + 3;
-
-
     txSleep(20);
+    
     txBegin();
     drawSky(RGB (31, 196, 224));
     drawKarabl(xKarabl,yKarabl);
     bar(xBar,yBar);
     Man(xMan,yMan,xLegs);
     txEnd();
-
     xLegs = xLegs + 13;
     xMan = xMan + 3;
-
     txSleep(20);
 
 
-        txBegin();
+    txBegin();
     drawSky(RGB (31, 196, 224));
     drawKarabl(xKarabl,yKarabl);
     bar(xBar,yBar);
@@ -1281,6 +1901,7 @@ while (xMan<340)
 
     txSleep(20);
     }
+
     xMan = 90;
 
     while( xMan< 295)
@@ -1291,9 +1912,9 @@ while (xMan<340)
     table();
     Man(xMan,yMan,xLegs);
     txEnd();
-    xMan = xMan+1;
+    xMan = xMan+3;
     xLegs = xLegs + 13;
-    txSleep(10);
+    txSleep(20);
 
     txBegin();
     inBar();
@@ -1301,9 +1922,9 @@ while (xMan<340)
     table();
     Man(xMan,yMan,xLegs);
     txEnd();
-    xMan = xMan+1;
+    xMan = xMan+3;
     xLegs = xLegs + 13;
-    txSleep(10);
+    txSleep(20);
 
     txBegin();
     inBar();
@@ -1311,9 +1932,9 @@ while (xMan<340)
     table();
     Man(xMan,yMan,xLegs);
     txEnd();
-    xMan = xMan+1;
+    xMan = xMan+3;
     xLegs = xLegs + 13;
-    txSleep(10);
+    txSleep(20);
 
     txBegin();
     inBar();
@@ -1321,9 +1942,9 @@ while (xMan<340)
     table();
     Man(xMan,yMan,xLegs);
     txEnd();
-    xMan = xMan+1;
+    xMan = xMan+3;
     xLegs = xLegs - 13;
-    txSleep(10);
+    txSleep(20);
 
     txBegin();
     inBar();
@@ -1331,24 +1952,166 @@ while (xMan<340)
     table();
     Man(xMan,yMan,xLegs);
     txEnd();
-    xMan = xMan+1;
+    xMan = xMan+3;
     xLegs = xLegs - 13;
-    txSleep(10);
+    txSleep(20);
 
     txBegin();
     inBar();
     NPC(xNPS,yNPS,xLegsNps);
     table();
     Man(xMan,yMan,xLegs);
-    Replic(const char* Я слышал ты ищешь
-Команду.
-Мы готовы быть с тобой в команде!, int sizeFont)
+    //реплика про команду
     txEnd();
-    xMan = xMan+1;
+    xMan = xMan+3;
     xLegs = xLegs - 13;
-    txSleep(10);
+    txSleep(20);
     }
 
+
+    xPoint = 0;
+
+    while( xPoint< 30)
+    {
+    txBegin();
+    Point(xPoint);
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xPoint = xPoint + 1;
+    txSleep(20);
+    }
+    while( xPoint< 100)
+    {
+    txBegin();
+    Point(xPoint);
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    Replic(300, 70, "Привет, слышал тебе нужен помощник", 25);
+    txEnd();
+    xPoint = xPoint + 1;
+    txSleep(20);
+
+    }
+
+    xPoint = 0;
+
+        while( xPoint< 100)
+    {
+    txBegin();
+    Point(xPoint);
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    Replic(300, 70, "Я могу тебе в этом помочь, но за небольшой процент", 25);
+    txEnd();
+    xPoint = xPoint + 1;
+    txSleep(20);
+
+    }
+
+        while( xPoint< 130)
+    {
+    txBegin();
+    Point(xPoint);
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xPoint = xPoint + 1;
+    txSleep(20);
+
+    }
+
+
+
+
+    while( xNPS> -100)
+    {
+    txBegin();
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xNPS = xNPS-3;
+    xMan = xMan-3;
+    xLegsNps = xLegsNps +13;
+    xLegs = xLegs + 13;
+    txSleep(20);
+    txBegin();
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xNPS = xNPS-3;
+    xMan = xMan-3;
+    xLegsNps = xLegsNps +13;
+    xLegs = xLegs + 13;
+    txSleep(20);
+
+    txBegin();
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xNPS = xNPS-3;
+    xMan = xMan-3;
+    xLegsNps = xLegsNps +13;
+    xLegs = xLegs + 13;
+    txSleep(20);
+
+    txBegin();
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xNPS = xNPS-3;
+    xMan = xMan-3;
+    xLegsNps = xLegsNps -13;
+    xLegs = xLegs - 13;
+    txSleep(20);
+
+    txBegin();
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xNPS = xNPS-3;
+    xMan = xMan-3;
+    xLegsNps = xLegsNps -13;
+    xLegs = xLegs - 13;
+    txSleep(20);
+
+    txBegin();
+    inBar();
+    NPC(xNPS,yNPS,xLegsNps);
+    table();
+    Man(xMan,yMan,xLegs);
+    txEnd();
+    xNPS = xNPS-3;
+    xMan = xMan-3;
+    xLegsNps = xLegsNps -13;
+    xLegs = xLegs - 13;
+    txSleep(20);
+    }
+
+
+
+ //На этом моменте я до конца определился с сюжетом :)
+
+  
+ 
 
 
 
